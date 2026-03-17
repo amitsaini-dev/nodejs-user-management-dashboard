@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your password</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Enter you password to edit your username</h1> <br>
+    <form method="POST" action="/user/<%= userData.id %>?_method=PATCH">
+    <label for="id">ID</label>
+    <input type="text" name="id" value="<%= userData.id %>" disabled><br><br>
+    <label for="username">OLD Username</label>
+    <input type="text" name="username" value="<%= userData.username%>" disabled> <br> <br>
+    <label for="username">Enter new Username</label>
+    <input type="text" name="username" id="username"> <br> <br>
+    <label for="password">Enter password</label>
+    <input type="text" placeholder="Enter your password" name="password" id="password"> <br> <br>
+    <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
